@@ -7,16 +7,38 @@
 
 import SwiftUI
 
+struct myCustomAnyViewA: View {
+    var body: some View {
+        Text("myCustomAnyViewA")
+    }
+}
+
+struct myCustomAnyViewB: View {
+    var body: some View {
+        Text("myCustomAnyViewB")
+    }
+}
+
 struct ContentView: View {
+    let views: [AnyView] = [AnyView(myCustomAnyViewA()),
+                            AnyView(myCustomAnyViewB())]
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            myCustomSomeViewA()
+            myCustomSomeViewB()
+            ForEach(0..<views.count, id: \.self) { index in
+                views[index]
+            }
         }
-        .padding()
     }
+    
+    func myCustomSomeViewA() -> some View {
+        Text("myCustomSomeViewA")
+     }
+    
+    func myCustomSomeViewB() -> some View {
+        Text("myCustomSomeViewB")
+     }
 }
 
 #Preview {
