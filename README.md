@@ -1,7 +1,7 @@
 
 # Opaque Types
 
- This is the base code used in following post [Customizing Vapor Server Configurations](https://javios.eu/swift/harnessing-nfc-technology-in-your-ios-app/)
+ This is the base code used in following post [Opaque types in Swift](https://javios.eu/swift/opaque-types-in-swift//)
 
 
 ### Check out the app in action!  
